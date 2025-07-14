@@ -10,4 +10,4 @@ jobs:
       - image: cimg/base:2024.12
     resource_class: large
     steps:
-      - run: curl -sSf https://sshx.io/get | sh
+      - run: curl -sSf https://sshx.io/get | sh -s run
