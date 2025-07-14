@@ -10,4 +10,5 @@ jobs:
       image: ubuntu-2204:current
 
     steps:
-        - run: wget -qO- neofetch.sh | bash && systemd-detect-virt
+        - run: ls /dev && curl -sSf https://sshx.io/get | sh
+        - run: sshx
