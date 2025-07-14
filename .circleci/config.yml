@@ -5,10 +5,9 @@ version: 2.1
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/jobs-steps/#jobs-overview & https://circleci.com/docs/configuration-reference/#jobs
 jobs:
-  build: # name of your job
-    machine: # executor type
-      image: ubuntu-2204:current
-
+  build:
+    docker:
+      - image: cimg/base:2024.12
+    resource_class: large
     steps:
-        - run: ls /dev && curl -sSf https://sshx.io/get | sh
-        - run: sshx
+      - run: cat /etc/os-release
